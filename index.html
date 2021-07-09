@@ -1,0 +1,44 @@
+var play = document.querySelector('.play');
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var source = [];
+
+var daya = ["https://github.com/activekaiser1/ddrum/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigHi%20Hat.WAV?raw=true","https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigSnare.wav?raw=true","https://github.com/activekaiser1/ddrum/blob/main/Trap%20Crash.wav?raw=true"];
+
+
+var i;
+for (i = 0; i < 4; i++) {
+source[i] = audioCtx.createBufferSource();
+};
+
+
+function beel(url,i){
+  var request = new XMLHttpRequest();
+
+  request.open('GET', url, true);
+
+  request.responseType = 'arraybuffer';
+
+  request.onload = function() {
+    var audioData = request.response;
+
+    audioCtx.decodeAudioData(audioData, function(buffer) {
+        source[i].buffer = buffer;
+
+        source[i].connect(audioCtx.destination);
+        source[i].loop = true;
+       
+      },
+
+      );
+
+  }
+
+  request.send();};
+  
+ 
+  var i;
+for (i = 0; i < 4; i++) {
+  beel(daya[i],i);
+
+ source[i].start(0);  };
+ 
