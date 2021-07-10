@@ -1,14 +1,13 @@
   
 <!DOCTYPE html>
 <html>
-  <button class="play" style="width:50px;height:50px;"></button>
+  <button class="play" style="width:250px;height:250px;"></button>
 <script>
 var play = document.querySelector('.play');
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source = [];
 
-var daya = ["https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true"];
-
+var daya = ["https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav"];
 var i;
 for (i = 0; i < 4; i++) {
 source[i] = audioCtx.createBufferSource();
