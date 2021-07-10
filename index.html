@@ -16,7 +16,7 @@ source[i] = audioCtx.createBufferSource();
 
 function beel(url,i){
   var request = new XMLHttpRequest();
-
+request.setRequestHeader('Access-Control-Allow-Origin','*');
   request.open('GET', url, true);
 
   request.responseType = 'arraybuffer';
