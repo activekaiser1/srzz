@@ -17,7 +17,10 @@ source[i] = audioCtx.createBufferSource();
 function beel(url,i){
   var request = new XMLHttpRequest();
    request.open('GET', url, true);
- request.setRequestHeader('Access-Control-Request-Method','GET');
+ // request.withCredentials = false;
+ request.setRequestHeader('Access-Control-Allow-Origin', '*');
+ request.setRequestHeader('Access-Control-Allow-Headers','Origin, X-Requested-With, Content-Type,Accept, Authortization');  
+ request.setRequestHeader('Acces-Control-Allow-Methods','GET, POST, PATCH, DELETE');
   request.setRequestHeader('Access-Control-Request-Private-Network','true');
   request.setRequestHeader('Access-Control-Allow-Headers', 'X-Custom-Header, Upgrade-Insecure-Requests');
   request.setRequestHeader('Access-Control-Allow-Headers', '*');
