@@ -17,7 +17,7 @@ source[i] = audioCtx.createBufferSource();
 
 function beel(url,i){
   var request = new XMLHttpRequest();
-  
+   request.open('GET', url, true);
  request.setRequestHeader('Access-Control-Request-Method','GET');
   request.setRequestHeader('Access-Control-Request-Private-Network','true');
   
@@ -26,8 +26,8 @@ request.setRequestHeader('Access-Control-Allow-Origin','https://github.com/activ
     request.setRequestHeader('Access-Control-Allow-Methods','GET');
    request.setRequestHeader('Access-Control-Allow-Credentials','true');
       request.setRequestHeader('Access-Control-Allow-Private-Network','true');
-  request.open('GET', url, true);
-request.withCredentials = false;
+ 
+
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
