@@ -18,7 +18,7 @@ function beel(url,i){
   var request = new XMLHttpRequest();
 
   request.open('GET', url, true);
-request.setRequestHeader('Access-Control-Allow-Origin','https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true.');
+request.withCredentials = false;
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
