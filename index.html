@@ -17,7 +17,15 @@ source[i] = audioCtx.createBufferSource();
 
 function beel(url,i){
   var request = new XMLHttpRequest();
-
+  
+ request.setRequestHeader('Access-Control-Request-Method','GET');
+  request.setRequestHeader('Access-Control-Request-Private-Network','true');
+  
+request.setRequestHeader('Access-Control-Allow-Origin','https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true');
+  request.setRequestHeader('Access-Control-Allow-Origin','https://activekaiser1.github.io/srzz/');
+    request.setRequestHeader('Access-Control-Allow-Methods','GET');
+   request.setRequestHeader('Access-Control-Allow-Credentials','true');
+      request.setRequestHeader('Access-Control-Allow-Private-Network','true');
   request.open('GET', url, true);
 request.withCredentials = false;
   request.responseType = 'arraybuffer';
