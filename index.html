@@ -30,7 +30,7 @@ function beel(url,i){
         source[i].buffer = buffer;
 
         source[i].connect(audioCtx.destination);
-      
+       source[i].loop = true;
        
       },
 
@@ -45,7 +45,9 @@ function beel(url,i){
 for (i = 0; i < 4; i++) {
   beel(daya[i],i);
 
- source[i].start(0);  };
+ source[i].start(0);
+
+};
    
  };
  </script>
