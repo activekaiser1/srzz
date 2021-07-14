@@ -7,7 +7,8 @@ var play = document.querySelector('.play');
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source = [];
 
-var daya = ["https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true","https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true"];
+var daya = ["https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav"];
+            
             var i;
 for (i = 0; i < 4; i++) {
 source[i] = audioCtx.createBufferSource();
@@ -17,18 +18,7 @@ source[i] = audioCtx.createBufferSource();
 function beel(url,i){
   var request = new XMLHttpRequest();
    request.open('GET', url, true);
- // request.withCredentials = false;
- request.setRequestHeader('Access-Control-Allow-Origin', '*');
- request.setRequestHeader('Access-Control-Allow-Headers','Origin, X-Requested-With, Content-Type,Accept, Authortization');  
- request.setRequestHeader('Acces-Control-Allow-Methods','GET, POST, PATCH, DELETE');
-  request.setRequestHeader('Access-Control-Request-Private-Network','true');
-  request.setRequestHeader('Access-Control-Allow-Headers', 'X-Custom-Header, Upgrade-Insecure-Requests');
-  request.setRequestHeader('Access-Control-Allow-Headers', '*');
-request.setRequestHeader('Access-Control-Allow-Origin','https://github.com/activekaiser1/srzz/blob/main/Calm%20Club%20808.wav?raw=true');
-  request.setRequestHeader('Access-Control-Allow-Origin','https://activekaiser1.github.io/srzz/');
-    request.setRequestHeader('Access-Control-Allow-Methods','GET');
-   request.setRequestHeader('Access-Control-Allow-Credentials','true');
-      request.setRequestHeader('Access-Control-Allow-Private-Network','true');
+
  
 
   request.responseType = 'arraybuffer';
